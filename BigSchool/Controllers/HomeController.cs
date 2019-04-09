@@ -24,11 +24,11 @@ namespace BigSchool.Controllers
                 .Include(c=>c.Lecturer)
                 .Include(c=>c.category)
                 .Where(c => c.DateTime > DateTime.Now);
-            var viewModel = new CoursesViewModel
-            {
-                UpcommingCourses = upcommingCourses,
-                ShowAction = User.Identity.IsAuthenticated
-            };
+            //var viewModel = new CoursesViewModel
+            //{
+            //    UpcommingCourses = upcommingCourses,
+            //    ShowAction = User.Identity.IsAuthenticated
+            //};
             return View(upcommingCourses);
         }
 

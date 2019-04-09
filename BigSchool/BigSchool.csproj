@@ -207,43 +207,23 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
-    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DTOs\AttendanceDto.cs" />
-    <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903280221557_InitialModel.cs" />
-    <Compile Include="Migrations\201903280221557_InitialModel.Designer.cs">
-      <DependentUpon>201903280221557_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201904091719124_CreateTableCourse.cs" />
+    <Compile Include="Migrations\201904091719124_CreateTableCourse.Designer.cs">
+      <DependentUpon>201904091719124_CreateTableCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903280302594_CreateTableCourse.cs" />
-    <Compile Include="Migrations\201903280302594_CreateTableCourse.Designer.cs">
-      <DependentUpon>201903280302594_CreateTableCourse.cs</DependentUpon>
+    <Compile Include="Migrations\201904091722143_PopulateCategoryTable.cs" />
+    <Compile Include="Migrations\201904091722143_PopulateCategoryTable.Designer.cs">
+      <DependentUpon>201904091722143_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903280308403_PopulaleCategoryTable.cs" />
-    <Compile Include="Migrations\201903280308403_PopulaleCategoryTable.Designer.cs">
-      <DependentUpon>201903280308403_PopulaleCategoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904011111283_update-database.cs" />
-    <Compile Include="Migrations\201904011111283_update-database.Designer.cs">
-      <DependentUpon>201904011111283_update-database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904020653159_AddNameColumnToApplicationUser.cs" />
-    <Compile Include="Migrations\201904020653159_AddNameColumnToApplicationUser.Designer.cs">
-      <DependentUpon>201904020653159_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904021053156_AddAttendance.cs" />
-    <Compile Include="Migrations\201904021053156_AddAttendance.Designer.cs">
-      <DependentUpon>201904021053156_AddAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040217310_AddFollowingsTable.cs" />
-    <Compile Include="Migrations\201904040217310_AddFollowingsTable.Designer.cs">
-      <DependentUpon>201904040217310_AddFollowingsTable.cs</DependentUpon>
+    <Compile Include="Migrations\InitialModel.cs" />
+    <Compile Include="Migrations\InitialModel.Designer.cs">
+      <DependentUpon>InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -334,26 +314,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903280221557_InitialModel.resx">
-      <DependentUpon>201903280221557_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904091719124_CreateTableCourse.resx">
+      <DependentUpon>201904091719124_CreateTableCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903280302594_CreateTableCourse.resx">
-      <DependentUpon>201903280302594_CreateTableCourse.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904091722143_PopulateCategoryTable.resx">
+      <DependentUpon>201904091722143_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903280308403_PopulaleCategoryTable.resx">
-      <DependentUpon>201903280308403_PopulaleCategoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904011111283_update-database.resx">
-      <DependentUpon>201904011111283_update-database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904020653159_AddNameColumnToApplicationUser.resx">
-      <DependentUpon>201904020653159_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904021053156_AddAttendance.resx">
-      <DependentUpon>201904021053156_AddAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040217310_AddFollowingsTable.resx">
-      <DependentUpon>201904040217310_AddFollowingsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\InitialModel.resx">
+      <DependentUpon>InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
