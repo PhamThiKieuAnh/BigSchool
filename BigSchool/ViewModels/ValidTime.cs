@@ -21,8 +21,5 @@ namespace BigSchool.ViewModels
              return isValid;
           
         }
-
-            
-              
-            }
-    }
+   }
+}

@@ -1,14 +1,27 @@
-﻿@model BigSchool.ViewModels.CoursesViewModel
+﻿@*@model BigSchool.ViewModels.CoursesViewModel*@
+@model IEnumerable<BigSchool.Models.Course>
 @{
     ViewBag.Title = "Home Page";
 }
-
-    <ul class="course">
-        @foreach (var course in Model.UpcommingCourses)
+@*<div class="row">
+    <ul>
+        @foreach (var course in Model)
         {
             <li>
-                @course.DateTime - @course.Lecturer.Name
+                @course.DateTime-@course.Lecturer.Name
             </li>
+        }
+    </ul>
+
+</div>*@
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+   
+    <ul class="course">
+        @foreach (var course in Model)
+        {
+            @*<li>
+                @course.DateTime - @course.Lecturer.Name
+            </li>*@
             <li>
                 <div class="date">
                     <div class="month">
@@ -22,18 +35,18 @@
                     <span class="lecturer">
                         
                         @course.Lecturer.Name
-                        @if (Model.ShowAction)
+                        @*@if (Model.ShowAction)
                         { 
                             <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
-                        }
+                        }*@
                     </span>
                     <span class="category">
                         @course.category.Name                     
                     </span>
-                         @if (Model.ShowAction)
+                         @*@if (Model.ShowAction)
                          {
                             <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
-                         }
+                         }*@
                 </div>
                
             </li>
@@ -41,7 +54,7 @@
     </ul>
 
 
-    @section scripts
+    @*@section scripts
     {
         <script>
             $(document).ready(function () {
@@ -58,18 +71,19 @@
                             alert("Something failed");
                         });
                 });
-                $(".js-toggle-follow").click(function (e){
+                $(".js-toggle-follow").click(function (e) {
                     var button = $(e.target);
-                    $.post("/api/followings" , { followeeId : button.attr("data-user-id")})
-                        .done(function(){
+                    $.post("/api/followings", { followeeId: button.attr("data-user-id") })
+                        .done(function () {
+                            button
                             button.text("Following");
-                                
+
                         })
-                        .fail(function(){
+                        .fail(function () {
                             alert("sometinh failed");
                         });
                 });
-            })
+            });
         </script>
       }
 
