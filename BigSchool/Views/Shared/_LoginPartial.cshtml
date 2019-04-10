@@ -10,7 +10,7 @@
                      <a href="#" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName() <span class=" caret"></span></a>
                         @User.Identity.GetUserName()<span class="caret"></span>
                  <ul class="dropdown-menu">
-                     <li><a href="#">Course i'm Going</a></li>
+                     <li><a href="@Url.Action("Attending","Courses")>Course i'm Going</a></li>
                       <li><a href="#">Lecture I'm Flowing</a></li>
                       <li role="separator" class="divider"></li>
                       @*<li>
